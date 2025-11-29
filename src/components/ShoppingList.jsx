@@ -1,0 +1,16 @@
+import React from "react";
+
+const ShoppingList = () => {
+  const shoppingList = ["Milk", "Bread", "Eggs", "Cheese", "Butter"];
+  return (
+    <ul>
+      {shoppingList.map(item => (
+        <li key={item} style={{ textDecoration: item === "Eggs" ? "line-through" : "none" }}>
+          {item}
+        </li>
+      ))}
+    </ul>
+  );
+};
+
+export default ShoppingList;
